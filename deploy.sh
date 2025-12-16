@@ -24,7 +24,7 @@ fi
 mkdir -p $PROJECT_DIR
 cd $PROJECT_DIR
 
-# 拉取 GitHub 仓库文件
+# 拉取 GitHub 仓库（确保你的 repo 已上传后台文件）
 git clone https://github.com/你的用户名/iptv-deploy.git temp
 cp -r temp/* .
 rm -rf temp
