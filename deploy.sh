@@ -25,7 +25,7 @@ mkdir -p $PROJECT_DIR
 cd $PROJECT_DIR
 
 # 拉取 GitHub 仓库（确保你的 repo 已上传后台文件）
-git clone https://github.com/你的用户名/iptv-deploy.git temp
+git clone https://github.com/5d5d5f5f5f/iptv-deploy.git temp
 cp -r temp/* .
 rm -rf temp
 
@@ -66,3 +66,4 @@ echo "后台管理: http://VPS_IP:$WEB_PORT/admin.php?pwd=admin123"
 echo "短链接访问示例: http://VPS_IP:$WEB_PORT/123456"
 echo "API接口示例: http://VPS_IP:$WEB_PORT/api.php?pwd=123456"
 echo "======================================"
+
