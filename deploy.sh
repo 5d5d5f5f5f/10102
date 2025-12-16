@@ -6,15 +6,15 @@ DB_NAME="iptv"
 WEB_PORT=9001
 PROJECT_DIR="/opt/iptv-auth"
 
-echo "=== IPTV 接口管理系统 GitHub 一键部署 ==="
+echo "=== IPTV 接口管理系统 一键部署 ==="
 
-# 安装 docker 和 docker-compose（如果未安装）
-if ! command -v docker &> /dev/null; then
+# 安装 Docker 和 docker-compose（如果未安装）
+if ! command -v docker &>/dev/null; then
     echo "[*] 安装 Docker..."
     curl -fsSL https://get.docker.com | bash
 fi
 
-if ! command -v docker-compose &> /dev/null; then
+if ! command -v docker-compose &>/dev/null; then
     echo "[*] 安装 Docker Compose..."
     curl -L "https://github.com/docker/compose/releases/download/v2.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
@@ -24,7 +24,7 @@ fi
 mkdir -p $PROJECT_DIR
 cd $PROJECT_DIR
 
-# 拉取 GitHub 仓库最新文件
+# 拉取 GitHub 仓库文件
 git clone https://github.com/你的用户名/iptv-deploy.git temp
 cp -r temp/* .
 rm -rf temp
