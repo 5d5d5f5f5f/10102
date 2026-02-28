@@ -1,4 +1,4 @@
-bash <<'EOF'
+#!/bin/bash
 set -e
 
 APP_DIR=/root/mytv-docker
@@ -6,8 +6,8 @@ PORT=8100
 CONTAINER=mytv
 
 echo "=== 创建目录 ==="
-mkdir -p $APP_DIR
-cd $APP_DIR
+mkdir -p "$APP_DIR"
+cd "$APP_DIR"
 
 echo "=== 写入 PHP 文件 ==="
 cat > mytv.php <<'PHP'
@@ -59,9 +59,8 @@ echo "=== 构建镜像 ==="
 docker build -t mytv-php .
 
 echo "=== 启动容器 ==="
-docker rm -f $CONTAINER 2>/dev/null || true
-docker run -d --name $CONTAINER --restart=always -p $PORT:80 mytv-php
+docker rm -f "$CONTAINER" 2>/dev/null || true
+docker run -d --name "$CONTAINER" --restart=always -p "$PORT":80 mytv-php
 
 echo "=== 部署完成 ==="
 echo "示例：http://服务器IP:$PORT/mytv.php?url=测试地址"
-EOF
