@@ -1,0 +1,39 @@
+docker pull g12777/easy-itv:latest
+------------------------------------------
+
+docker run -d \
+   --restart unless-stopped \
+   --name easy-itv \
+   -p 5124:8123 \
+   g12777/easy-itv:latest \
+   -token=8520
+------------------------------
+http://43.251.226.110:9003/tv.m3u?token=8520
+
+
+
+
+
+
+
+
+docker pull doubebly/doube-ofiii:1.1.5
+
+vps部署：
+
+
+# 为简化部署方式使用设置环境变量 MY_OFIII_TOKEN 作为订阅的token, 部署时修改默认的 Doubebly
+
+# 直播TXT订阅地址: http://43.251.226.89:50005/Sub.txt?token=8520&sd=1080&proxy=true
+
+# 直播M3u订阅地址: http://43.251.226.89:50005/Sub.m3u?token=8520&sd=1080&proxy=true
+
+# 点播M3u订阅地址: http://43.251.226.89:50005/Sub.vod.txt?token=8520&sd=1080&proxy=true
+
+# 订阅链接不加参数默认 sd=1080, proxy=false, 如果需要代理ts修改 proxy=true
+
+
+docker run -d --name=doube-itv  --restart=always -p 50005:5000 doubebly/doube-itv:latest
+
+docker run -d --name=doube-ofiii -p 50005:5000 -e MY_OFIII_TOKEN=8520 --restart=always doubebly/doube-ofiii:1.1.5
+
