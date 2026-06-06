@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>私人影视库</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top,#0f2d52 0%,#07111f 35%,#02060c 100%);
+    font-family:"Microsoft YaHei",sans-serif;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:
+    0 0 30px rgba(0,255,255,.15),
+    0 0 60px rgba(0,150,255,.08);
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    font-weight:bold;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#00e5ff,#4da6ff,#8a7dff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    text-align:center;
+    color:#b8d7ff;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+.section{
+    margin-bottom:28px;
+}
+
+.section h3{
+    color:#00e5ff;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    padding:10px 16px;
+    border-radius:50px;
+    background:rgba(0,229,255,.08);
+    border:1px solid rgba(0,229,255,.25);
+    color:#dffcff;
+    font-size:14px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.item{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    padding:18px;
+}
+
+.label{
+    color:#7fdfff;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.value{
+    font-size:16px;
+    word-break:break-all;
+}
+
+.download{
+    text-align:center;
+    margin-top:35px;
+}
+
+.download a{
+    display:inline-block;
+    padding:14px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    background:linear-gradient(90deg,#00e5ff,#007bff);
+    box-shadow:0 0 25px rgba(0,229,255,.35);
+    transition:.3s;
+}
+
+.download a:hover{
+    transform:translateY(-2px);
+}
+
+.step{
+    background:rgba(255,255,255,.04);
+    border-radius:16px;
+    padding:20px;
+    line-height:2;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    color:#89a6c7;
+    font-size:13px;
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:30px;
+}
+
+.card{
+    padding:25px;
+}
+
+.subtitle{
+    font-size:15px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="title">私人影视库</div>
+
+<div class="subtitle">
+聚合影片资源，智能识别影片信息与封面海报<br>
+无需下载视频，流畅在线播放<br>
+
+</div>
+
+<div class="section">
+<h3>支持平台</h3>
+
+<div class="tags">
+<div class="tag">苹果手机</div>
+<div class="tag">安卓手机</div>
+<div class="tag">安卓 TV</div>
+<div class="tag">Windows</div>
+<div class="tag">macOS</div>
+</div>
+
+</div>
+
+<div class="section">
+<h3>支持资源</h3>
+
+<div class="tags">
+<div class="tag">Emby</div>
+<div class="tag">Jellyfin</div>
+<div class="tag">飞牛影视</div>
+<div class="tag">极空间影视</div>
+<div class="tag">阿里云盘</div>
+<div class="tag">百度网盘</div>
+<div class="tag">115网盘</div>
+<div class="tag">天翼云盘</div>
+<div class="tag">中国移动云盘</div>
+<div class="tag">123云盘</div>
+<div class="tag">光鸭云盘</div>
+<div class="tag">WebDAV</div>
+<div class="tag">SMB</div>
+</div>
+
+</div>
+
+<div class="section">
+<h3>WebDAV 手机端配置</h3>
+
+<div class="info">
+
+<div class="item">
+<div class="label">地址</div>
+<div class="value">118.89.62.59</div>
+</div>
+
+<div class="item">
+<div class="label">端口</div>
+<div class="value">5050</div>
+</div>
+
+<div class="item">
+<div class="label">用户名</div>
+<div class="value">cGaxZahsWB</div>
+</div>
+
+<div class="item">
+<div class="label">密码</div>
+<div class="value">fpxOnkguEB</div>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h3>TV端使用说明</h3>
+
+<div class="step">
+① TV端无需手动填写服务器地址、账号和密码<br>
+② 先安装手机端并完成登录<br>
+③ 使用手机端扫描 TV 端二维码登录<br>
+④ 登录成功后自动同步资源库<br>
+⑤ 手机端进入【资源库】点击【+】添加<br>
+⑥ 选择【WebDAV】并填写上方配置信息
+</div>
+
+</div>
+
+<div class="download">
+<a href="https://bmh.163.com" target="_blank">
+立即下载
+</a>
+</div>
+
+<div class="footer">
+资源库整合公开互联网资源，请合理使用
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
